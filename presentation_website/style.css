@@ -1,0 +1,75 @@
+:root{
+  --page1-color: steelblue;
+  --page2-color: tan;
+  --page3-color: teal;
+  --page4-color: slateblue;
+  --animation-speed: 2s;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  overflow: hidden;
+}
+#page1{ background-color: var(--page1-color);}
+#page2{ background-color: var(--page2-color);}
+#page3{ background-color: var(--page3-color);}
+#page4{ background-color: var(--page4-color);}
+
+.page{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 4rem;
+}
+.page h1{
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 1rem;
+}
+.page p{
+  font-size: 1.3rem;
+}
+.btn{
+  display: inline-block;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in;
+}
+.btn:hover, 
+.btn-dark{
+  background-color: #333;
+  color: #f4f4f4;
+}
+.btn-dark:hover{
+  background-color: #f4f4f4;
+  color: #333;
+}
+#page1 h1{
+  transform: translateY(-1200px);
+  animation: header var(--animation-speed) forwards ease-in;
+}
+@keyframes header{
+  to{
+    transform: translateY(0);
+  }
+}
+#page1 p{
+  transform: translateX(-1800px);
+  animation: paragraph var(--animation-speed) forwards ease-in;
+}
+@keyframes paragraph{
+  to{
+    transform: translateX(0);
+  }
+}
